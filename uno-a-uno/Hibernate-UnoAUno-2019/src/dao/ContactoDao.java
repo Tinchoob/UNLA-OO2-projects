@@ -34,8 +34,60 @@ public class ContactoDao {
 		return id;
 	}
 
+	
+	public void actualizar(Contacto objeto) throws HibernateException{
+		try {
+			iniciaOperacion();
+			session.update(objeto);
+			tx.commit();
+			
+		}catch(HibernateException he) {
+			manejaExcepcion(he);
+			throw he;
+		}
+		finally {
+			session.close();
+		}	
+	}
+	
+	
+	
+	public Contacto traerContacto(long idContacto)throws HibernateException{
+		Contacto objeto = null;
+		try {
+			iniciaOperacion();
+			objeto = session.get(Contacto.class, idContacto);
+		}catch(HibernateException he) {
+			manejaExcepcion(he);
+			throw he;
+		}
+		
+		finally {
+			session.close();
+		}
+		
+		return objeto;
+		
+		
+		
+	}
+	
+	public void eliminar(Contacto objeto) throws HibernateException{
+		try {
+			iniciaOperacion();
+			session.delete(objeto);
+			tx.commit();
+		}catch(HibernateException he) {
+			manejaExcepcion(he);
+			throw he;
+		}
+		finally {
+			session.close();
+		}
+	}
+	
 
-	/*FALTA IMPLEMENTAR MODIFICAR Y ELIMINAR Contacto*/
+	/*FALTA IMPLEMENTAR ELIMINAR Contacto*/
 
 
 }
