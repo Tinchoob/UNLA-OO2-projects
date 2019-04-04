@@ -1,6 +1,6 @@
 package datos;
 
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
 import funciones.Funciones;
 
 public class Cliente {
@@ -8,13 +8,13 @@ public class Cliente {
 	private String apellido;
 	private String nombre;
 	private int dni;
-	private GregorianCalendar fechaDeNacimiento;
+	private LocalDate fechaDeNacimiento;
 	private boolean baja;
 
 	public Cliente() {
 	} // siempre hay que implementar el constructor vacio
 
-	public Cliente(String apellido, String nombre, int dni, GregorianCalendar fechaDeNacimiento) {// nunca va el id en
+	public Cliente(String apellido, String nombre, int dni, LocalDate fechaDeNacimiento) {// nunca va el id en
 																									// el constructor
 																									// por ser
 																									// autoincrementable
@@ -59,11 +59,11 @@ public class Cliente {
 		this.dni = dni;
 	}
 
-	public GregorianCalendar getFechaDeNacimiento() {
+	public LocalDate getFechaDeNacimiento() {
 		return fechaDeNacimiento;
 	}
 
-	public void setFechaDeNacimiento(GregorianCalendar fechaDeNacimiento) {
+	public void setFechaDeNacimiento(LocalDate fechaDeNacimiento) {
 		this.fechaDeNacimiento = fechaDeNacimiento;
 	}
 

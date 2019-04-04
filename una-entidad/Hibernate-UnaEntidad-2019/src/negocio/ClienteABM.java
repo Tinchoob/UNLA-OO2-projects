@@ -4,6 +4,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import dao.ClienteDao;
 import datos.Cliente;
+import java.time.LocalDate;
 
 public class ClienteABM {
 	ClienteDao dao = new ClienteDao();
@@ -20,7 +21,7 @@ public class ClienteABM {
 		
 	}
 
-	public int agregar(String apellido, String nombre, int dni, GregorianCalendar fechaDeNacimiento) throws Exception {
+	public int agregar(String apellido, String nombre, int dni, LocalDate fechaDeNacimiento) throws Exception {
 		Cliente c = new Cliente(apellido, nombre, dni, fechaDeNacimiento);
 		if (traerCliente(dni) != null) {
 			throw new Exception("ERROR: El cliente " + nombre + " " + apellido + " ya existe en la base de datos");

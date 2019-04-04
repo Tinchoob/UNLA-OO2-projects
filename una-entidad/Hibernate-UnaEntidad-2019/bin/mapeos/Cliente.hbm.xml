@@ -9,7 +9,7 @@
 <property column="apellido" name="apellido" type="string"/>						<!-- EN PROPERTIES VA PRIMERO EL NOMBRE EN LA TABLA, LUEGO EL DE LA CLASE -->
 <property column="nombre" name="nombre" type="string"/>
 <property column="documento" name="dni" type="int"/>
-<property column="fechaDeNacimiento" name="fechaDeNacimiento" type="calendar"/>
+<property column="fechaDeNacimiento" name="fechaDeNacimiento" type="LocalDate"/>
 <property column="baja" name="baja" type="boolean"/>
 </class>
 </hibernate-mapping>
