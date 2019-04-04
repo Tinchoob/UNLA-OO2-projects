@@ -1,22 +1,22 @@
 package datos;
 
-import java.util.GregorianCalendar;
 import funciones.Funciones;
 import datos.Contacto;
+import java.time.LocalDate;
 
 public class Cliente {
 	private long idCliente;
 	private String apellido;
 	private String nombre;
 	private int dni;
-	private GregorianCalendar fechaDeNacimiento;
+	private LocalDate fechaDeNacimiento;
 	private boolean baja;
 	private Contacto contacto;
 
 	public Cliente() {
 	}
 
-	public Cliente(String apellido, String nombre, int dni, GregorianCalendar fechaDeNacimiento) {
+	public Cliente(String apellido, String nombre, int dni, LocalDate fechaDeNacimiento) {
 		super();
 		this.apellido = apellido;
 		this.nombre = nombre;
@@ -57,11 +57,11 @@ public class Cliente {
 		this.dni = dni;
 	}
 
-	public GregorianCalendar getFechaDeNacimiento() {
+	public LocalDate getFechaDeNacimiento() {
 		return fechaDeNacimiento;
 	}
 
-	public void setFechaDeNacimiento(GregorianCalendar fechaDeNacimiento) {
+	public void setFechaDeNacimiento(LocalDate fechaDeNacimiento) {
 		this.fechaDeNacimiento = fechaDeNacimiento;
 	}
 

@@ -9,7 +9,7 @@
 <property column="apellido" name="apellido" type="string"/>
 <property column="nombre" name="nombre" type="string"/>
 <property column="dni" name="dni" type="int"/>
-<property column="fechaDeNacimiento" name="fechaDeNacimiento" type="calendar"/>
+<property column="fechaDeNacimiento" name="fechaDeNacimiento" type="LocalDate"/>
 <property column="baja" name="baja" type="boolean"/>
 
 <one-to-one name="contacto" class="datos.Contacto" ></one-to-one>

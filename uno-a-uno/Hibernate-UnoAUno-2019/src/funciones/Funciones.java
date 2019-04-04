@@ -1,5 +1,6 @@
 package funciones;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 
 import java.util.GregorianCalendar;
@@ -106,11 +107,15 @@ public class Funciones {
 		return f;
 	}
 
-	public static String traerFechaCorta(GregorianCalendar fecha) {
+	public static String traerFechaCorta(LocalDate fecha) {
 		int dia = 0, mes = 0, anio = 0;
-		dia = fecha.get(Calendar.DAY_OF_MONTH);
-		mes = fecha.get(Calendar.MONTH) + 1;
-		anio = fecha.get(Calendar.YEAR);
+		dia = fecha.getDayOfMonth();
+		mes = fecha.getMonthValue();
+		anio = fecha.getYear();
+
+//		dia = fecha.get(Calendar.DAY_OF_MONTH);
+//		mes = fecha.get(Calendar.MONTH) + 1;
+//		anio = fecha.get(Calendar.YEAR);
 
 		return (dia + "/" + mes + "/" + anio);
 
